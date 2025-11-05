@@ -83,7 +83,7 @@
         },
         "sqlServerEdition": {
         "type": "string",
-        "defaultValue": "Developer",
+        "defaultValue": "Standard",
         "allowedValues": [
             "Developer",
             "Standard",
