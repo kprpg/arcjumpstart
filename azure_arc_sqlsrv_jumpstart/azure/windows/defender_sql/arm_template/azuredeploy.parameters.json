@@ -3,28 +3,28 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "windowsAdminUsername": {
-            "value": "<Windows VM admin username>"
+            "value": "gpillai"
         },
         "windowsAdminPassword": {
-            "value": "<Windows VM admin password>"
+            "value": "ArcPassword123!!"
         },
         "spnClientId": {
-            "value": "<Azure service principal name>"
+            "value": "dc6cb566-8ee9-4896-85f2-3a4b2e5e9930"
         },
         "spnClientSecret": {
-            "value": "<Azure service principal password>"
+            "value": "gcL8Q~KCZ8s6xzekiZ5JsoDv5IyhG._uQZVw9cF0"
         },
         "spnTenantId": {
-            "value": "<Azure tenant ID>"
+            "value": "173eb3fc-9ba1-437f-99a1-89d5e53b91d1"
         },
         "sqlServerEdition": {
-            "value": "<Developer|Standard|Enterprise>. Default is Developer edition."
+            "value": "Standard"
         },         
         "logAnalyticsWorkspaceName": {
-            "value": "<your unique Log Analytics workspace name>"
+            "value": "lab-arc-defender-sql-la"
         },
         "deployBastion": {
-            "value": "(true/false)"
+            "value": true
         }
     }
 }

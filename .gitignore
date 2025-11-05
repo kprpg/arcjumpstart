@@ -54,3 +54,4 @@ terraform.rc
 *.out
 .VSCodeCounter/*
 azure_jumpstart_ag/manufacturing/bicep/main.*.parameters.json
+azure_arc_sqlsrv_jumpstart/azure/windows/defender_sql/arm_template/azuredeploy.parameters.json
