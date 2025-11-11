@@ -2,6 +2,10 @@
 
 A crisp, practical guide to reduce AVD spend primarily by shutting down and right‑sizing session hosts without impacting user experience.
 
+## Related Documents
+- Resilience checklist: [`avd-resilience-checklist.md`](./avd-resilience-checklist.md)
+- Hosts & host pools resiliency FAQ: [`avd-hosts-hostpools-resiliency-faq.md`](./avd-hosts-hostpools-resiliency-faq.md)
+
 ## Core Levers
 - Autoscale: use AVD Scaling Plans to power off/deallocate hosts outside demand.
 - Start VM on Connect: keep hosts off; first user wakes one up.

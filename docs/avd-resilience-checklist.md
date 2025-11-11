@@ -1,6 +1,10 @@
 # Azure Virtual Desktop Production Resilience & Reliability Checklist
 
-A deep operational guide to harden, monitor, and rapidly recover Azure Virtual Desktop (AVD) in production. Pairs with cost controls in `docs/avd-cost-optimization.md` (optimize spend without sacrificing reliability).
+A deep operational guide to harden, monitor, and rapidly recover Azure Virtual Desktop (AVD) in production.
+
+## Related Documents
+- Cost optimization playbook: [`avd-cost-optimization.md`](./avd-cost-optimization.md)
+- Hosts & host pools resiliency FAQ: [`avd-hosts-hostpools-resiliency-faq.md`](./avd-hosts-hostpools-resiliency-faq.md)
 
 ## 1. How To Use
 - Frequency: Run full review quarterly; lightweight score weekly.
