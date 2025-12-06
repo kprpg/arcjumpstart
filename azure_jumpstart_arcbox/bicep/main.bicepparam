@@ -6,7 +6,7 @@ param tenantId = '173eb3fc-9ba1-437f-99a1-89d5e53b91d1'
 
 param windowsAdminUsername = 'arcdemo'
 
-param windowsAdminPassword = 'lanka@DEVI54321'
+param windowsAdminPassword = 'arcDemo12345!!'
 
 param logAnalyticsWorkspaceName = 'arc-box-la'
 
