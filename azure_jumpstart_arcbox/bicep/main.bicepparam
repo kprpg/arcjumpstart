@@ -4,17 +4,25 @@ param sshRSAPublicKey = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMLkJlk/ejT8oUSZ9
 
 param tenantId = '173eb3fc-9ba1-437f-99a1-89d5e53b91d1'
 
-param windowsAdminUsername = 'arcdemo'
+param windowsAdminUsername = 'arcdemox'
 
-param windowsAdminPassword = 'arcDemo12345!!'
+param windowsAdminPassword = 'arcDemo12345!'
 
-param logAnalyticsWorkspaceName = 'arc-box-la'
+param logAnalyticsWorkspaceName = 'arcboxdataopsla'
 
-param flavor = 'ITPro'
+// param flavor = 'ITPro'
+param flavor = 'DataOps'
+
+param customLocationRPOID = '1cfaeef1-b7c6-4d4a-9cfd-65ca98c4c74a'
+
+param sqlServerEdition = 'Enterprise'
 
 param deployBastion = true
+
+param autoShutdownEnabled = true
+param autoShutdownTime = '1900' // Time in HHmm format, e.g., '1900' for 7:00 PM
+param autoShutdownTimezone = 'Central Standard Time' // Time zone, e.g., 'Pacific Standard Time'
 
 param vmAutologon = true
 
 param resourceTags = {} // Add tags as needed
-

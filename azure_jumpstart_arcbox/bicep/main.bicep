@@ -12,7 +12,7 @@ param windowsAdminUsername string
 @minLength(12)
 @maxLength(123)
 @secure()
-param windowsAdminPassword string  = newGuid()
+param windowsAdminPassword string = newGuid()
 
 @description('Enable automatic logon into ArcBox Virtual Machine')
 param vmAutologon bool = true
@@ -63,7 +63,7 @@ param githubUser string = 'Azure'
 param addsDomainName string = 'jumpstart.local'
 
 @description('Random GUID for cluster names')
-param guid string = substring(newGuid(),0,4)
+param guid string = substring(newGuid(), 0, 4)
 
 @description('Azure location to deploy all resources')
 param location string = resourceGroup().location
@@ -111,7 +111,9 @@ var aksDrArcDataClusterName = '${namingPrefix}-AKS-DR-Data-${guid}'
 var k3sArcDataClusterName = '${namingPrefix}-K3s-Data-${guid}'
 var k3sArcClusterName = '${namingPrefix}-K3s-${guid}'
 var k3sClusterNodesCount = 3 // Number of nodes to deploy in the K3s cluster
-var customerUsageAttributionDeploymentName = (flavor == 'DevOps' ? '390d1642-349e-43c5-845e-8c7cc0972f22' : flavor == 'DataOps' ? 'a8caf3c1-0980-4e23-8c52-27e5d424dbbd' : 'c4a26bed-72cb-415d-91a3-e2577c7c92f5')
+var customerUsageAttributionDeploymentName = (flavor == 'DevOps'
+  ? '390d1642-349e-43c5-845e-8c7cc0972f22'
+  : flavor == 'DataOps' ? 'a8caf3c1-0980-4e23-8c52-27e5d424dbbd' : 'c4a26bed-72cb-415d-91a3-e2577c7c92f5')
 
 module ubuntuRancherK3sDataSvcDeployment 'kubernetes/ubuntuRancher.bicep' = if (flavor == 'DevOps' || flavor == 'DataOps') {
   name: 'ubuntuRancherK3sDataSvcDeployment'
@@ -122,31 +124,33 @@ module ubuntuRancherK3sDataSvcDeployment 'kubernetes/ubuntuRancher.bicep' = if (
     templateBaseUrl: templateBaseUrl
     subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
     azureLocation: location
-    vmName : k3sArcDataClusterName
+    vmName: k3sArcDataClusterName
     storageContainerName: toLower(k3sArcDataClusterName)
     flavor: flavor
     namingPrefix: namingPrefix
   }
 }
 
-module ubuntuRancherK3sDataSvcNodesDeployment 'kubernetes/ubuntuRancherNodes.bicep' = [for i in range(0, k3sClusterNodesCount): if (flavor == 'DataOps' || flavor == 'DevOps') {
-  name: 'ubuntuRancherK3sDataSvcNodesDeployment-${i}'
-  params: {
-    sshRSAPublicKey: sshRSAPublicKey
-    stagingStorageAccountName: toLower(stagingStorageAccountDeployment.outputs.storageAccountName)
-    logAnalyticsWorkspace: logAnalyticsWorkspaceName
-    templateBaseUrl: templateBaseUrl
-    subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
-    azureLocation: location
-    flavor: flavor
-    vmName : '${k3sArcDataClusterName}-Node-0${i}'
-    storageContainerName: toLower(k3sArcDataClusterName)
-    namingPrefix: namingPrefix
+module ubuntuRancherK3sDataSvcNodesDeployment 'kubernetes/ubuntuRancherNodes.bicep' = [
+  for i in range(0, k3sClusterNodesCount): if (flavor == 'DataOps' || flavor == 'DevOps') {
+    name: 'ubuntuRancherK3sDataSvcNodesDeployment-${i}'
+    params: {
+      sshRSAPublicKey: sshRSAPublicKey
+      stagingStorageAccountName: toLower(stagingStorageAccountDeployment.outputs.storageAccountName)
+      logAnalyticsWorkspace: logAnalyticsWorkspaceName
+      templateBaseUrl: templateBaseUrl
+      subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
+      azureLocation: location
+      flavor: flavor
+      vmName: '${k3sArcDataClusterName}-Node-0${i}'
+      storageContainerName: toLower(k3sArcDataClusterName)
+      namingPrefix: namingPrefix
+    }
+    dependsOn: [
+      ubuntuRancherK3sDataSvcDeployment
+    ]
   }
-  dependsOn: [
-    ubuntuRancherK3sDataSvcDeployment
-  ]
-}]
+]
 
 module ubuntuRancherK3sDeployment 'kubernetes/ubuntuRancher.bicep' = if (flavor == 'DevOps') {
   name: 'ubuntuRancherK3sDeployment'
@@ -157,31 +161,33 @@ module ubuntuRancherK3sDeployment 'kubernetes/ubuntuRancher.bicep' = if (flavor 
     templateBaseUrl: templateBaseUrl
     subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
     azureLocation: location
-    vmName : k3sArcClusterName
+    vmName: k3sArcClusterName
     storageContainerName: toLower(k3sArcClusterName)
     flavor: flavor
     namingPrefix: namingPrefix
   }
 }
 
-module ubuntuRancherK3sNodesDeployment 'kubernetes/ubuntuRancherNodes.bicep' = [for i in range(0, k3sClusterNodesCount): if (flavor == 'DevOps') {
-  name: 'ubuntuRancherK3sNodesDeployment-${i}'
-  params: {
-    sshRSAPublicKey: sshRSAPublicKey
-    stagingStorageAccountName: toLower(stagingStorageAccountDeployment.outputs.storageAccountName)
-    logAnalyticsWorkspace: logAnalyticsWorkspaceName
-    templateBaseUrl: templateBaseUrl
-    subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
-    azureLocation: location
-    flavor: flavor
-    vmName : '${k3sArcClusterName}-Node-0${i}'
-    storageContainerName: toLower(k3sArcClusterName)
-    namingPrefix: namingPrefix
+module ubuntuRancherK3sNodesDeployment 'kubernetes/ubuntuRancherNodes.bicep' = [
+  for i in range(0, k3sClusterNodesCount): if (flavor == 'DevOps') {
+    name: 'ubuntuRancherK3sNodesDeployment-${i}'
+    params: {
+      sshRSAPublicKey: sshRSAPublicKey
+      stagingStorageAccountName: toLower(stagingStorageAccountDeployment.outputs.storageAccountName)
+      logAnalyticsWorkspace: logAnalyticsWorkspaceName
+      templateBaseUrl: templateBaseUrl
+      subnetId: mgmtArtifactsAndPolicyDeployment.outputs.subnetId
+      azureLocation: location
+      flavor: flavor
+      vmName: '${k3sArcClusterName}-Node-0${i}'
+      storageContainerName: toLower(k3sArcClusterName)
+      namingPrefix: namingPrefix
+    }
+    dependsOn: [
+      ubuntuRancherK3sDeployment
+    ]
   }
-  dependsOn: [
-    ubuntuRancherK3sDeployment
-  ]
-}]
+]
 
 module clientVmDeployment 'clientVm/clientVm.bicep' = {
   name: 'clientVmDeployment'
@@ -198,10 +204,10 @@ module clientVmDeployment 'clientVm/clientVm.bicep' = {
     githubBranch: githubBranch
     githubUser: githubUser
     location: location
-    k3sArcDataClusterName : k3sArcDataClusterName
-    k3sArcClusterName : k3sArcClusterName
-    aksArcClusterName : aksArcDataClusterName
-    aksdrArcClusterName : aksDrArcDataClusterName
+    k3sArcDataClusterName: k3sArcDataClusterName
+    k3sArcClusterName: k3sArcClusterName
+    aksArcClusterName: aksArcDataClusterName
+    aksdrArcClusterName: aksDrArcDataClusterName
     vmAutologon: vmAutologon
     rdpPort: rdpPort
     addsDomainName: addsDomainName
@@ -247,23 +253,23 @@ module mgmtArtifactsAndPolicyDeployment 'mgmt/mgmtArtifacts.bicep' = {
   }
 }
 
-module addsVmDeployment 'mgmt/addsVm.bicep' = if (flavor == 'DataOps'){
+module addsVmDeployment 'mgmt/addsVm.bicep' = if (flavor == 'DataOps') {
   name: 'addsVmDeployment'
   params: {
-    windowsAdminUsername : windowsAdminUsername
-    windowsAdminPassword : windowsAdminPassword
+    windowsAdminUsername: windowsAdminUsername
+    windowsAdminPassword: windowsAdminPassword
     addsDomainName: addsDomainName
     deployBastion: deployBastion
     templateBaseUrl: templateBaseUrl
     azureLocation: location
     namingPrefix: namingPrefix
   }
-  dependsOn:[
+  dependsOn: [
     mgmtArtifactsAndPolicyDeployment
   ]
 }
 
-module updateVNetDNSServers 'mgmt/mgmtArtifacts.bicep' = if (flavor == 'DataOps'){
+module updateVNetDNSServers 'mgmt/mgmtArtifacts.bicep' = if (flavor == 'DataOps') {
   name: 'updateVNetDNSServers'
   params: {
     workspaceName: logAnalyticsWorkspaceName
@@ -271,8 +277,8 @@ module updateVNetDNSServers 'mgmt/mgmtArtifacts.bicep' = if (flavor == 'DataOps'
     deployBastion: deployBastion
     location: location
     dnsServers: [
-    '10.16.2.100'
-    '168.63.129.16'
+      '10.16.2.100'
+      '168.63.129.16'
     ]
     namingPrefix: namingPrefix
   }
@@ -287,8 +293,8 @@ module aksDeployment 'kubernetes/aks.bicep' = if (flavor == 'DataOps') {
   params: {
     sshRSAPublicKey: sshRSAPublicKey
     location: location
-    aksClusterName : aksArcDataClusterName
-    drClusterName : aksDrArcDataClusterName
+    aksClusterName: aksArcDataClusterName
+    drClusterName: aksDrArcDataClusterName
     namingPrefix: namingPrefix
   }
   dependsOn: [
@@ -300,8 +306,7 @@ module aksDeployment 'kubernetes/aks.bicep' = if (flavor == 'DataOps') {
 
 module customerUsageAttribution 'mgmt/customerUsageAttribution.bicep' = {
   name: 'pid-${customerUsageAttributionDeploymentName}'
-  params: {
-  }
+  params: {}
 }
 
 output clientVmLogonUserName string = flavor == 'DataOps' ? '${windowsAdminUsername}@${addsDomainName}' : ''
