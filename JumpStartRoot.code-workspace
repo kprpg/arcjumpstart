@@ -4,5 +4,19 @@
             "path": "."
         }
     ],
-    "settings": {}
+    "settings": {
+        "window.titleBarStyle": "custom",
+        "workbench.colorCustomizations": {
+            "titleBar.activeBackground": "#002050",
+            "titleBar.inactiveBackground": "#001636",
+            "titleBar.activeForeground": "#FFFFFF",
+            "titleBar.inactiveForeground": "#FFFFFFCC",
+            "statusBar.background": "#002050",
+            "statusBar.noFolderBackground": "#002050",
+            "statusBar.debuggingBackground": "#001636",
+            "statusBar.foreground": "#FFFFFF",
+            "quickInput.background": "#000000",
+            "quickInput.foreground": "#FFFFFF"
+        }
+    }
 }
