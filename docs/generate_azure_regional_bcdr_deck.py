@@ -36,7 +36,7 @@ slides = [
             "Single datacenter or availability-zone failure.",
             "Single-region failure in US East 2.",
             "Wider East Coast disruption affecting connectivity or the operating model.",
-            "Each failure scope requires a different control set.",
+            "Each scenario requires a different control set.",
         ],
     },
     {
@@ -45,7 +45,7 @@ slides = [
             "Availability zones help with facility-level failures.",
             "Regional recovery patterns help with some region-level failures.",
             "Neither solves for loss of the broader East Coast operating geography.",
-            "The hedge for that scenario is another geography.",
+            "The appropriate hedge for that scenario is another geography.",
         ],
     },
     {
@@ -60,7 +60,7 @@ slides = [
         "title": "What Good Looks Like",
         "bullets": [
             "No single-instance production services.",
-            "A DR environment exists before the crisis, not after.",
+            "The disaster recovery environment exists before the crisis, not after.",
             "Data services replicate across regions.",
             "The application entry point supports controlled failover.",
             "Runbooks and recovery artifacts remain available outside the primary geography.",
@@ -78,9 +78,9 @@ slides = [
     {
         "title": "Recommendation by Scenario",
         "bullets": [
-            "If the customer wants conventional DR, use Central US as the DR region now.",
-            "If the customer wants a stronger East Coast hedge, use West US 2 or West US 3.",
-            "If the customer wants to reduce East Coast concentration further, evaluate Central US as a future primary.",
+            "Use Central US as the default disaster recovery region for a balanced design.",
+            "Use West US 2 or West US 3 when wider geographic separation is the priority.",
+            "Evaluate Central US as a future primary if East Coast concentration needs to be reduced further.",
         ],
     },
     {
@@ -125,7 +125,7 @@ slides = [
         "title": "Recommended Next Steps",
         "bullets": [
             "Confirm data residency constraints.",
-            "Define RTO and RPO by workload tier.",
+            "Define recovery time and recovery point targets by workload tier.",
             "Select the target DR geography.",
             "Validate region service availability and quota.",
             "Build the secondary landing zone.",
@@ -136,15 +136,15 @@ slides = [
     {
         "title": "Leadership Decision Required",
         "bullets": [
-            "Maximum resilience with a cross-geography design.",
-            "Lower latency with a compromise design.",
-            "East Coast concentration with accepted residual wide-area risk.",
+            "A balanced paired-region design centered on Central US.",
+            "A stronger east-plus-west design for wider separation.",
+            "A future primary-region shift if East Coast concentration needs to be reduced further.",
         ],
     },
     {
         "title": "Closing Statement",
         "bullets": [
-            "If the organization is truly planning for the loss of US East 2 or a wider East Coast operating disruption, the correct hedge is another geography, not just another zone in US East 2.",
+            "If the organization is planning for the loss of US East 2 or a wider East Coast operating disruption, the right hedge is another geography, not just another zone in US East 2.",
         ],
     },
 ]
