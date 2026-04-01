@@ -1,22 +1,22 @@
-# Slide Deck: Azure UAE Relocation and BCDR Strategy
+# Slide Deck: Azure US East 2 Relocation and BCDR Strategy
 
 ## Slide 1: Title
 
-Azure UAE Relocation and BCDR Strategy
+Azure US East 2 Relocation and BCDR Strategy
 
 Planning for datacenter, regional, and geopolitical disruption
 
 ## Slide 2: Why This Matters
 
 - The threat model is not a routine outage.
-- The customer is planning for physical destruction or prolonged unavailability of a UAE datacenter, region, or operating environment.
-- A UAE-only resilience strategy is not enough for that scenario.
+- The customer is planning for loss of US East 2 or a wider East Coast operating disruption.
+- A US East 2-only resilience strategy is not enough for that scenario.
 
 ## Slide 3: The Three Failure Scopes
 
 1. Single datacenter or availability-zone failure.
-2. Single-region failure in UAE.
-3. UAE-wide geopolitical or sovereign disruption.
+2. Single-region failure in US East 2.
+3. Wider East Coast disruption affecting operations, connectivity, or the regional dependency chain.
 
 Each requires a different control set.
 
@@ -24,14 +24,14 @@ Each requires a different control set.
 
 - Availability zones help with facility-level failures.
 - Paired-region concepts help with some regional recovery scenarios.
-- Neither is a complete answer to the loss of UAE as a geography.
+- Neither is a complete answer to the loss of the East Coast operating geography.
 - The hedge against that scenario is another geography.
 
 ## Slide 5: Recommended Strategy
 
 1. Multi-zone resilience inside the primary region.
 2. Cross-region recovery for regional outages.
-3. Cross-geography recovery outside UAE for geopolitical disruption.
+3. Cross-geography recovery outside the East Coast blast radius.
 
 ## Slide 6: What Good Looks Like
 
@@ -43,20 +43,20 @@ Each requires a different control set.
 
 ## Slide 7: Region Options
 
-- UAE North plus UAE Central: best for UAE-only DR.
-- Qatar Central or Saudi Arabia Central: lower-latency compromise.
-- North Europe or West Europe: strongest default hedge.
-- Switzerland North: governance-oriented specialized option.
+- US East 2 plus Central US: default paired-region DR.
+- US East 2 plus South Central US: lower-latency compromise.
+- US East 2 plus West US 2 or West US 3: strongest default hedge.
+- Central US primary plus US East 2 secondary: strong relocation option.
 
 ## Slide 8: Recommendation by Scenario
 
-### If data can leave UAE
+### If the customer wants conventional DR
 
-Use North Europe or West Europe as the DR geography now. Consider moving the primary there if resilience is the main objective.
+Use Central US as the DR region now.
 
-### If data must remain in UAE
+### If the customer wants a stronger East Coast hedge
 
-Use UAE North and UAE Central where supported, and formally document residual country-level risk.
+Use West US 2 or West US 3 as the DR region and document the added latency and operating complexity.
 
 ## Slide 9: Technical Pattern
 
@@ -71,17 +71,15 @@ Use UAE North and UAE Central where supported, and formally document residual co
 - Region pairing is not automatic DR.
 - Microsoft-managed storage failover is not a full application recovery plan.
 - Backups alone are not a business continuity strategy.
-- A second UAE location does not fully hedge a UAE-wide disruption.
+- A second east-side region does not fully hedge a wider East Coast disruption.
 
 ## Slide 11: Decision Matrix
 
-| Option                                  | Position                           |
-| --------------------------------------- | ---------------------------------- |
-| UAE North only                          | Not sufficient                     |
-| UAE North plus UAE Central              | Good only for UAE-only constraints |
-| UAE plus Qatar or Saudi DR              | Reasonable compromise              |
-| UAE plus North Europe or West Europe DR | Recommended default                |
-| Europe primary plus UAE secondary       | Best overall if regulation allows  |
+- US East 2 only: not sufficient.
+- US East 2 plus Central US: recommended default.
+- US East 2 plus South Central US: reasonable compromise.
+- US East 2 plus West US 2 or West US 3: recommended for stronger separation.
+- Central US primary plus US East 2: strong relocation option.
 
 ## Slide 12: Recommended Next Steps
 
@@ -98,12 +96,12 @@ Use UAE North and UAE Central where supported, and formally document residual co
 The business must choose between:
 
 - Maximum resilience with a cross-geography design.
-- Lower latency with a compromise design.
-- UAE-only compliance with accepted residual geopolitical risk.
+- Lower latency with a paired-region design.
+- Stronger separation with an east-plus-west design.
 
 ## Slide 14: Closing Statement
 
-If the organization is truly planning for the loss of UAE as an operating location, the correct hedge is another geography, not just another datacenter in UAE.
+If the organization is truly planning for the loss of US East 2 or a wider East Coast operating disruption, the correct hedge is another geography, not just another zone in US East 2.
 
 ## Speaker Notes
 
@@ -111,5 +109,5 @@ If the organization is truly planning for the loss of UAE as an operating locati
 
 - Emphasize that this is not standard high availability planning.
 - Distinguish datacenter failure, regional outage, and geopolitical loss.
-- Use Europe as the default recommendation unless regulation or latency clearly overrides it.
-- State residual risk plainly when the customer insists on UAE-only hosting.
+- Use Central US as the default recommendation unless the threat model requires wider separation.
+- State residual risk plainly when the customer limits recovery to the eastern half of the United States.

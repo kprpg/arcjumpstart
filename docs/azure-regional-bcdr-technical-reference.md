@@ -1,12 +1,12 @@
-# Technical Reference: Azure BCDR Strategy for UAE Geopolitical Risk
+# Technical Reference: Azure BCDR Strategy for US East 2 Regional Risk
 
 ## Scope
 
-This reference is for Azure workloads currently hosted in UAE and requiring protection from:
+This reference is for Azure workloads currently hosted in US East 2 and requiring protection from:
 
 1. Loss of a single datacenter or availability zone.
-2. Loss of an entire Azure region in UAE.
-3. Loss of UAE as an operating geography due to conflict, physical damage, or prolonged disruption.
+2. Loss of the US East 2 region.
+3. Loss of the broader East Coast operating environment due to wide-area disruption, network dependency failure, or prolonged regional impact.
 
 ## Design Principle
 
@@ -17,7 +17,7 @@ Use different controls for different blast radii. A single technical pattern doe
 - No single-instance production dependencies.
 - Clear recovery time objective and recovery point objective by application tier.
 - Cross-region recovery for critical stateful services.
-- Cross-geography survivability for high-risk geopolitical scenarios.
+- Cross-geography survivability for high-impact East Coast scenarios.
 - Regular test failover and operational runbooks.
 
 ## Reference Architecture
@@ -38,8 +38,8 @@ Use different controls for different blast radii. A single technical pattern doe
 
 ### Layer 3: Cross-Geography Survivability
 
-- Maintain a second geography outside UAE for mission-critical applications.
-- Keep infrastructure-as-code, backup metadata, and recovery runbooks outside UAE.
+- Maintain a second geography outside the eastern United States for mission-critical applications when the threat model requires it.
+- Keep infrastructure-as-code, backup metadata, and recovery runbooks outside the East Coast dependency chain.
 - Ensure recovery operations do not depend on a single office, local ISP, or locally held credentials.
 
 ## Workload Patterns
@@ -102,7 +102,7 @@ Use different controls for different blast radii. A single technical pattern doe
 ## Backup Strategy
 
 - Use immutable backups for critical datasets.
-- Store backup policies and recovery procedures outside the primary UAE dependency chain.
+- Store backup policies and recovery procedures outside the primary US East 2 dependency chain.
 - Test restore operations, not just backup job success.
 
 ## Networking and Identity
@@ -144,7 +144,7 @@ Use different controls for different blast radii. A single technical pattern doe
 - RTO: 24 hours or more.
 - Pattern: backup and restore.
 
-## Migration Sequence for Leaving UAE
+## Migration Sequence for Leaving US East 2
 
 1. Inventory all workloads and classify them by criticality and compliance.
 2. Select the target geography based on regulation first.
@@ -159,4 +159,4 @@ Use different controls for different blast radii. A single technical pattern doe
 
 ## Residual Risk Statement
 
-If primary production and all recoverable data remain only inside UAE, the organization retains residual exposure to a country-level disruption. That risk should be explicitly accepted by business leadership rather than treated as a technical gap alone.
+If primary production and all recoverable data remain only inside US East 2, the organization retains residual exposure to a regional outage. If both primary and recovery environments remain concentrated on the eastern half of the United States, the organization also retains exposure to a wider East Coast disruption. That risk should be explicitly accepted by business leadership rather than treated as a technical gap alone.

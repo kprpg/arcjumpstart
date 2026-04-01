@@ -1,10 +1,10 @@
 flowchart LR
-    users[Users in UAE and GCC] --> fd[Azure Front Door or Traffic Manager]
+    users[Users on US East Coast] --> fd[Azure Front Door or Traffic Manager]
 
-    fd --> uae[Primary: UAE North]
-    fd --> eu[Secondary: North Europe or West Europe]
+    fd --> east[Primary: US East 2]
+    fd --> secondary[Secondary: Central US or West US 2 or 3]
 
-    subgraph UAE_Stack[UAE Primary Stack]
+    subgraph EAST_Stack[US East 2 Primary Stack]
         app1[App Tier]
         data1[Data Tier]
         kv1[Key Vault and Config]
@@ -14,7 +14,7 @@ flowchart LR
         app1 --> mon1
     end
 
-    subgraph EU_Stack[Secondary Geography Stack]
+    subgraph SECONDARY_Stack[Secondary US Geography Stack]
         app2[Standby App Tier]
         data2[Replicated Data Tier]
         kv2[Secondary Key Vault and Config]
@@ -31,7 +31,7 @@ flowchart LR
         registry[Container Images and Artifacts]
     end
 
-    uae --> EU_Stack
-    UAE_Stack --> EU_Stack
-    Control --> UAE_Stack
-    Control --> EU_Stack
+    east --> SECONDARY_Stack
+    EAST_Stack --> SECONDARY_Stack
+    Control --> EAST_Stack
+    Control --> SECONDARY_Stack

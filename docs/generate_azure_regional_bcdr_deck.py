@@ -4,7 +4,7 @@ from pptx.enum.text import PP_ALIGN
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
 
-OUTPUT_PATH = r"c:\Users\gpillai\source\repos\arcjumpstart\docs\uae-relocation-bcdr-slide-deck.pptx"
+OUTPUT_PATH = r"c:\Users\gpillai\source\repos\arcjumpstart\docs\azure-regional-bcdr-slide-deck.pptx"
 
 prs = Presentation()
 prs.slide_width = Inches(13.333)
@@ -18,24 +18,24 @@ BG_COLOR = RGBColor(248, 250, 252)
 
 slides = [
     {
-        "title": "Azure UAE Relocation and BCDR Strategy",
-        "subtitle": "Planning for datacenter, regional, and geopolitical disruption",
+        "title": "Azure US East 2 Relocation and BCDR Strategy",
+        "subtitle": "Planning for datacenter, regional, and wide-area East Coast disruption",
         "bullets": [],
     },
     {
         "title": "Why This Matters",
         "bullets": [
             "The scenario is not a routine outage or a standard DR exercise.",
-            "The customer is planning for physical destruction or prolonged unavailability of UAE hosting.",
-            "A UAE-only resilience strategy is not sufficient for that threat model.",
+            "The customer is planning for loss of US East 2 or a wider East Coast operating disruption.",
+            "A US East 2-only resilience strategy is not sufficient for that threat model.",
         ],
     },
     {
         "title": "The Three Failure Scopes",
         "bullets": [
             "Single datacenter or availability-zone failure.",
-            "Single-region failure in UAE.",
-            "UAE-wide geopolitical or sovereign disruption.",
+            "Single-region failure in US East 2.",
+            "Wider East Coast disruption affecting connectivity or the operating model.",
             "Each failure scope requires a different control set.",
         ],
     },
@@ -44,7 +44,7 @@ slides = [
         "bullets": [
             "Availability zones help with facility-level failures.",
             "Regional recovery patterns help with some region-level failures.",
-            "Neither solves for loss of UAE as an operating geography.",
+            "Neither solves for loss of the broader East Coast operating geography.",
             "The hedge for that scenario is another geography.",
         ],
     },
@@ -53,7 +53,7 @@ slides = [
         "bullets": [
             "Use multi-zone resilience inside the primary region.",
             "Use cross-region recovery for regional outages.",
-            "Use cross-geography recovery outside UAE for geopolitical disruption.",
+            "Use cross-geography recovery outside the East Coast blast radius.",
         ],
     },
     {
@@ -69,18 +69,18 @@ slides = [
     {
         "title": "Region Options",
         "bullets": [
-            "UAE North plus UAE Central: best for UAE-only DR.",
-            "Qatar Central or Saudi Arabia Central: lower-latency compromise.",
-            "North Europe or West Europe: strongest default hedge.",
-            "Switzerland North: governance-oriented specialized option.",
+            "US East 2 plus Central US: default paired-region DR.",
+            "US East 2 plus South Central US: lower-latency compromise.",
+            "US East 2 plus West US 2 or West US 3: strongest geographic hedge.",
+            "Central US primary plus US East 2 secondary: strong relocation option.",
         ],
     },
     {
         "title": "Recommendation by Scenario",
         "bullets": [
-            "If data can leave UAE, use North Europe or West Europe as the DR geography now.",
-            "If resilience is the main objective, consider moving the production primary there as well.",
-            "If data must remain in UAE, use UAE North and UAE Central where supported and document residual country-level risk.",
+            "If the customer wants conventional DR, use Central US as the DR region now.",
+            "If the customer wants a stronger East Coast hedge, use West US 2 or West US 3.",
+            "If the customer wants to reduce East Coast concentration further, evaluate Central US as a future primary.",
         ],
     },
     {
@@ -99,7 +99,7 @@ slides = [
             "Region pairing is not automatic DR.",
             "Platform-managed storage failover is not a full application recovery plan.",
             "Backups alone are not a business continuity strategy.",
-            "A second UAE location does not fully hedge a UAE-wide disruption.",
+            "A second east-side region does not fully hedge a wider East Coast disruption.",
         ],
     },
     {
@@ -107,13 +107,16 @@ slides = [
         "table": {
             "columns": ["Option", "Position"],
             "rows": [
-                ["UAE North only", "Not sufficient"],
-                ["UAE North plus UAE Central", "Good only for UAE-only constraints"],
-                ["UAE plus Qatar or Saudi DR", "Reasonable compromise"],
-                ["UAE plus North Europe or West Europe DR", "Recommended default"],
+                ["US East 2 only", "Not sufficient"],
+                ["US East 2 plus Central US", "Recommended default"],
+                ["US East 2 plus South Central US", "Reasonable compromise"],
                 [
-                    "Europe primary plus UAE secondary",
-                    "Best overall if regulation allows",
+                    "US East 2 plus West US 2 or West US 3",
+                    "Recommended for stronger separation",
+                ],
+                [
+                    "Central US primary plus US East 2 secondary",
+                    "Strong relocation option",
                 ],
             ],
         },
@@ -135,13 +138,13 @@ slides = [
         "bullets": [
             "Maximum resilience with a cross-geography design.",
             "Lower latency with a compromise design.",
-            "UAE-only compliance with accepted residual geopolitical risk.",
+            "East Coast concentration with accepted residual wide-area risk.",
         ],
     },
     {
         "title": "Closing Statement",
         "bullets": [
-            "If the organization is truly planning for the loss of UAE as an operating location, the correct hedge is another geography, not just another datacenter in UAE.",
+            "If the organization is truly planning for the loss of US East 2 or a wider East Coast operating disruption, the correct hedge is another geography, not just another zone in US East 2.",
         ],
     },
 ]
