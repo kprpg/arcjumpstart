@@ -1,0 +1,272 @@
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.enum.text import PP_ALIGN
+from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
+
+OUTPUT_PATH = r"c:\Users\gpillai\source\repos\arcjumpstart\docs\uae-relocation-bcdr-slide-deck.pptx"
+
+prs = Presentation()
+prs.slide_width = Inches(13.333)
+prs.slide_height = Inches(7.5)
+
+TITLE_COLOR = RGBColor(11, 44, 91)
+ACCENT_COLOR = RGBColor(0, 120, 212)
+TEXT_COLOR = RGBColor(33, 37, 41)
+MUTED_COLOR = RGBColor(96, 103, 112)
+BG_COLOR = RGBColor(248, 250, 252)
+
+slides = [
+    {
+        "title": "Azure UAE Relocation and BCDR Strategy",
+        "subtitle": "Planning for datacenter, regional, and geopolitical disruption",
+        "bullets": [],
+    },
+    {
+        "title": "Why This Matters",
+        "bullets": [
+            "The scenario is not a routine outage or a standard DR exercise.",
+            "The customer is planning for physical destruction or prolonged unavailability of UAE hosting.",
+            "A UAE-only resilience strategy is not sufficient for that threat model.",
+        ],
+    },
+    {
+        "title": "The Three Failure Scopes",
+        "bullets": [
+            "Single datacenter or availability-zone failure.",
+            "Single-region failure in UAE.",
+            "UAE-wide geopolitical or sovereign disruption.",
+            "Each failure scope requires a different control set.",
+        ],
+    },
+    {
+        "title": "Core Message",
+        "bullets": [
+            "Availability zones help with facility-level failures.",
+            "Regional recovery patterns help with some region-level failures.",
+            "Neither solves for loss of UAE as an operating geography.",
+            "The hedge for that scenario is another geography.",
+        ],
+    },
+    {
+        "title": "Recommended Strategy",
+        "bullets": [
+            "Use multi-zone resilience inside the primary region.",
+            "Use cross-region recovery for regional outages.",
+            "Use cross-geography recovery outside UAE for geopolitical disruption.",
+        ],
+    },
+    {
+        "title": "What Good Looks Like",
+        "bullets": [
+            "No single-instance production services.",
+            "A DR environment exists before the crisis, not after.",
+            "Data services replicate across regions.",
+            "The application entry point supports controlled failover.",
+            "Runbooks and recovery artifacts remain available outside the primary geography.",
+        ],
+    },
+    {
+        "title": "Region Options",
+        "bullets": [
+            "UAE North plus UAE Central: best for UAE-only DR.",
+            "Qatar Central or Saudi Arabia Central: lower-latency compromise.",
+            "North Europe or West Europe: strongest default hedge.",
+            "Switzerland North: governance-oriented specialized option.",
+        ],
+    },
+    {
+        "title": "Recommendation by Scenario",
+        "bullets": [
+            "If data can leave UAE, use North Europe or West Europe as the DR geography now.",
+            "If resilience is the main objective, consider moving the production primary there as well.",
+            "If data must remain in UAE, use UAE North and UAE Central where supported and document residual country-level risk.",
+        ],
+    },
+    {
+        "title": "Technical Pattern",
+        "bullets": [
+            "Azure Front Door or Traffic Manager for failover routing.",
+            "Azure Site Recovery for VM-based workloads.",
+            "Native geo-replication for PaaS data services.",
+            "A secondary landing zone with networking, identity, logging, and secrets prebuilt.",
+            "Immutable backups and tested restore procedures.",
+        ],
+    },
+    {
+        "title": "What Not to Assume",
+        "bullets": [
+            "Region pairing is not automatic DR.",
+            "Platform-managed storage failover is not a full application recovery plan.",
+            "Backups alone are not a business continuity strategy.",
+            "A second UAE location does not fully hedge a UAE-wide disruption.",
+        ],
+    },
+    {
+        "title": "Decision Matrix",
+        "table": {
+            "columns": ["Option", "Position"],
+            "rows": [
+                ["UAE North only", "Not sufficient"],
+                ["UAE North plus UAE Central", "Good only for UAE-only constraints"],
+                ["UAE plus Qatar or Saudi DR", "Reasonable compromise"],
+                ["UAE plus North Europe or West Europe DR", "Recommended default"],
+                [
+                    "Europe primary plus UAE secondary",
+                    "Best overall if regulation allows",
+                ],
+            ],
+        },
+    },
+    {
+        "title": "Recommended Next Steps",
+        "bullets": [
+            "Confirm data residency constraints.",
+            "Define RTO and RPO by workload tier.",
+            "Select the target DR geography.",
+            "Validate region service availability and quota.",
+            "Build the secondary landing zone.",
+            "Implement replication and failover.",
+            "Run a real DR exercise.",
+        ],
+    },
+    {
+        "title": "Leadership Decision Required",
+        "bullets": [
+            "Maximum resilience with a cross-geography design.",
+            "Lower latency with a compromise design.",
+            "UAE-only compliance with accepted residual geopolitical risk.",
+        ],
+    },
+    {
+        "title": "Closing Statement",
+        "bullets": [
+            "If the organization is truly planning for the loss of UAE as an operating location, the correct hedge is another geography, not just another datacenter in UAE.",
+        ],
+    },
+]
+
+
+def set_background(slide):
+    fill = slide.background.fill
+    fill.solid()
+    fill.fore_color.rgb = BG_COLOR
+
+
+def add_header_bar(slide):
+    shape = slide.shapes.add_shape(
+        MSO_AUTO_SHAPE_TYPE.RECTANGLE, 0, 0, prs.slide_width, Inches(0.35)
+    )
+    shape.fill.solid()
+    shape.fill.fore_color.rgb = TITLE_COLOR
+    shape.line.fill.background()
+
+
+def add_title(slide, title):
+    box = slide.shapes.add_textbox(Inches(0.7), Inches(0.55), Inches(12), Inches(0.8))
+    tf = box.text_frame
+    p = tf.paragraphs[0]
+    run = p.add_run()
+    run.text = title
+    run.font.name = "Aptos Display"
+    run.font.size = Pt(26)
+    run.font.bold = True
+    run.font.color.rgb = TITLE_COLOR
+
+
+def add_footer(slide, index):
+    box = slide.shapes.add_textbox(Inches(11.7), Inches(7.0), Inches(1.0), Inches(0.3))
+    tf = box.text_frame
+    p = tf.paragraphs[0]
+    p.alignment = PP_ALIGN.RIGHT
+    run = p.add_run()
+    run.text = str(index)
+    run.font.name = "Aptos"
+    run.font.size = Pt(10)
+    run.font.color.rgb = MUTED_COLOR
+
+
+def add_bullets(slide, bullets):
+    box = slide.shapes.add_textbox(
+        Inches(0.95), Inches(1.55), Inches(11.4), Inches(4.9)
+    )
+    tf = box.text_frame
+    tf.word_wrap = True
+    for index, bullet in enumerate(bullets):
+        p = tf.paragraphs[0] if index == 0 else tf.add_paragraph()
+        p.text = bullet
+        p.level = 0
+        p.font.name = "Aptos"
+        p.font.size = Pt(22)
+        p.font.color.rgb = TEXT_COLOR
+        p.space_after = Pt(10)
+        p.bullet = True
+
+
+def add_subtitle(slide, subtitle):
+    box = slide.shapes.add_textbox(Inches(0.95), Inches(1.8), Inches(11), Inches(1.2))
+    tf = box.text_frame
+    p = tf.paragraphs[0]
+    run = p.add_run()
+    run.text = subtitle
+    run.font.name = "Aptos"
+    run.font.size = Pt(24)
+    run.font.color.rgb = MUTED_COLOR
+
+
+def add_table(slide, columns, rows):
+    table_shape = slide.shapes.add_table(
+        len(rows) + 1, len(columns), Inches(0.7), Inches(1.6), Inches(12.0), Inches(4.7)
+    )
+    table = table_shape.table
+    for idx, name in enumerate(columns):
+        cell = table.cell(0, idx)
+        cell.text = name
+        cell.fill.solid()
+        cell.fill.fore_color.rgb = TITLE_COLOR
+        paragraph = cell.text_frame.paragraphs[0]
+        paragraph.font.name = "Aptos"
+        paragraph.font.size = Pt(16)
+        paragraph.font.bold = True
+        paragraph.font.color.rgb = RGBColor(255, 255, 255)
+    for row_idx, row in enumerate(rows, start=1):
+        for col_idx, value in enumerate(row):
+            cell = table.cell(row_idx, col_idx)
+            cell.text = value
+            cell.fill.solid()
+            cell.fill.fore_color.rgb = (
+                RGBColor(255, 255, 255) if row_idx % 2 else RGBColor(240, 244, 248)
+            )
+            paragraph = cell.text_frame.paragraphs[0]
+            paragraph.font.name = "Aptos"
+            paragraph.font.size = Pt(14)
+            paragraph.font.color.rgb = TEXT_COLOR
+    table.columns[0].width = Inches(5.2)
+    table.columns[1].width = Inches(6.8)
+
+
+for index, payload in enumerate(slides, start=1):
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    set_background(slide)
+    add_header_bar(slide)
+    add_title(slide, payload["title"])
+    if payload.get("subtitle"):
+        add_subtitle(slide, payload["subtitle"])
+    if payload.get("bullets"):
+        add_bullets(slide, payload["bullets"])
+    if payload.get("table"):
+        add_table(slide, payload["table"]["columns"], payload["table"]["rows"])
+    accent = slide.shapes.add_shape(
+        MSO_AUTO_SHAPE_TYPE.RECTANGLE,
+        Inches(0.7),
+        Inches(1.25),
+        Inches(1.4),
+        Inches(0.08),
+    )
+    accent.fill.solid()
+    accent.fill.fore_color.rgb = ACCENT_COLOR
+    accent.line.fill.background()
+    add_footer(slide, index)
+
+prs.save(OUTPUT_PATH)
+print(OUTPUT_PATH)
