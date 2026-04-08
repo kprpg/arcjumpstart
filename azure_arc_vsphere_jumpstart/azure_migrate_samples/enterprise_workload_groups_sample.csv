@@ -1,0 +1,19 @@
+application_name,environment,criticality,owner,vm_count,target_pattern
+commerce-java,prod,tier-1,digital-commerce,14,"Three-tier Java estate on AVS first, then selective modernization"
+member-dotnet,prod,tier-1,member-platform,12,"Three-tier .NET estate rehost first, App Service review later"
+sap-s4hana,prod,tier-1,erp-platform,14,Conservative AVS-led SAP migration with later platform optimization
+sap-bw,prod,tier-1,data-warehouse,10,AVS-first SAP analytics estate
+citrix-vdi,prod,tier-1,end-user-compute,31,Citrix estate retained short-term while Azure Virtual Desktop options are evaluated
+payments-sqlao,prod,tier-1,payments,11,SQL Always On workload with AVS or Azure VM split depending latency and support model
+ehr-core,prod,tier-1,clinical-platform,16,Rehost first with staged application and database modernization
+claims-core,prod,tier-2,claims-it,10,Azure VM and managed database mix
+provider-portal,prod,tier-2,provider-digital,10,Three-tier .NET portal estate with future App Service option
+integration-bus,prod,tier-2,integration-platform,8,Azure VM then container review
+identity-services,prod,tier-1,security-engineering,6,Conservative AVS-first identity estate
+data-warehouse,prod,tier-2,data-platform,10,Azure VM then analytics modernization
+pacs-imaging,prod,tier-1,imaging-services,8,Conservative migration due to imaging latency and archive dependencies
+lab-systems,prod,tier-2,lab-it,6,AVS or Azure VM depending analyzer connectivity
+pharmacy,prod,tier-2,pharmacy-it,6,Rehost with later modernization assessment
+call-center,prod,tier-2,customer-ops,10,Azure VM and App Service hybrid path
+research-genomics,prod,tier-2,research-platform,14,Azure VM compute burst with later HPC and data-lake review
+devops-shared,dev,tier-3,platform-engineering,4,Azure VMs or PaaS replacement

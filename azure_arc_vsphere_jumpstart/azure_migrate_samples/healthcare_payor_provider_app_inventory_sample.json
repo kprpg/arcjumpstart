@@ -1,0 +1,142 @@
+{
+  "organization_profile": {
+    "scenario_name": "NorthStar Children's Health",
+    "industry": "healthcare payor-provider with pediatric research hospital characteristics",
+    "notes": "Fictional sample modeled after a major pediatric research and care delivery organization; not an Azure Migrate native schema."
+  },
+  "applications": [
+    {
+      "application_name": "epic-ehr-core",
+      "business_owner": "Clinical Informatics",
+      "technical_owner": "Clinical Informatics Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Conservative clinical rehost with staged Azure modernization",
+      "notes": "Fictional pediatric research hospital core EHR footprint aligned to high-availability clinical operations."
+    },
+    {
+      "application_name": "patient-portal-dotnet",
+      "business_owner": "Digital Patient Experience",
+      "technical_owner": "Digital Patient Experience Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Three-tier .NET estate with rehost first and App Service later",
+      "notes": "Synthetic healthcare application 2 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "revenue-cycle-sap",
+      "business_owner": "Finance And Revenue Cycle",
+      "technical_owner": "Finance And Revenue Cycle Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "SOX",
+      "target_pattern": "SAP-led rehost for finance and supply workflows",
+      "notes": "Synthetic healthcare application 3 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "claims-adjudication",
+      "business_owner": "Payer Operations",
+      "technical_owner": "Payer Operations Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "HIPAA",
+      "target_pattern": "Azure VM and managed database mix for payer workloads",
+      "notes": "Synthetic healthcare application 4 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "citrix-clinical-desktops",
+      "business_owner": "Clinical End User Compute",
+      "technical_owner": "Clinical End User Compute Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Short-term Citrix retention while Azure Virtual Desktop strategy is validated",
+      "notes": "Synthetic healthcare application 5 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "research-genomics-pipeline",
+      "business_owner": "Translational Research",
+      "technical_owner": "Translational Research Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "research-data",
+      "target_pattern": "Research compute rehost with future HPC and data platform modernization",
+      "notes": "Synthetic healthcare application 6 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "pacs-imaging",
+      "business_owner": "Radiology Platform",
+      "technical_owner": "Radiology Platform Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Low-disruption imaging migration with network and archive dependency review",
+      "notes": "Synthetic healthcare application 7 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "lab-information-system",
+      "business_owner": "Laboratory Services",
+      "technical_owner": "Laboratory Services Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Rehost first due to analyzer and interface dependencies",
+      "notes": "Synthetic healthcare application 8 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "pharmacy-management",
+      "business_owner": "Pharmacy Operations",
+      "technical_owner": "Pharmacy Operations Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Clinical support system with conservative initial placement",
+      "notes": "Synthetic healthcare application 9 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "provider-directory",
+      "business_owner": "Network Management",
+      "technical_owner": "Network Management Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "PII",
+      "target_pattern": "Three-tier .NET provider portal",
+      "notes": "Synthetic healthcare application 10 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "integration-engine",
+      "business_owner": "Interop Platform",
+      "technical_owner": "Interop Platform Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Interface engine estate with later container review",
+      "notes": "Synthetic healthcare application 11 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "identity-and-access",
+      "business_owner": "Cybersecurity",
+      "technical_owner": "Cybersecurity Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "internal",
+      "target_pattern": "Conservative AVS-first identity estate",
+      "notes": "Synthetic healthcare application 12 for VMware to Azure migration testing."
+    }
+  ],
+  "vm_count": 121
+}

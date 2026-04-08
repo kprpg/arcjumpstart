@@ -1,0 +1,203 @@
+{
+  "applications": [
+    {
+      "application_name": "commerce-java",
+      "business_owner": "Digital Commerce",
+      "technical_owner": "Digital Commerce Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "PCI",
+      "target_pattern": "Three-tier Java estate on AVS first, then selective modernization",
+      "notes": "Classic three-tier Java estate with high change control and low cutover tolerance."
+    },
+    {
+      "application_name": "member-dotnet",
+      "business_owner": "Member Platform",
+      "technical_owner": "Member Platform Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "PII",
+      "target_pattern": "Three-tier .NET estate rehost first, App Service review later",
+      "notes": "Three-tier .NET workload with gradual move toward Azure-native app hosting."
+    },
+    {
+      "application_name": "sap-s4hana",
+      "business_owner": "Erp Platform",
+      "technical_owner": "Erp Platform Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "SOX",
+      "target_pattern": "Conservative AVS-led SAP migration with later platform optimization",
+      "notes": "SAP S/4HANA style footprint with presentation, app, batch, and HANA database tiers."
+    },
+    {
+      "application_name": "sap-bw",
+      "business_owner": "Data Warehouse",
+      "technical_owner": "Data Warehouse Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "SOX",
+      "target_pattern": "AVS-first SAP analytics estate",
+      "notes": "Synthetic enterprise application 4 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "citrix-vdi",
+      "business_owner": "End User Compute",
+      "technical_owner": "End User Compute Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "internal",
+      "target_pattern": "Citrix estate retained short-term while Azure Virtual Desktop options are evaluated",
+      "notes": "Citrix control plane plus worker pool for EUC migration and cost-analysis scenarios."
+    },
+    {
+      "application_name": "payments-sqlao",
+      "business_owner": "Payments",
+      "technical_owner": "Payments Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "PCI",
+      "target_pattern": "SQL Always On workload with AVS or Azure VM split depending latency and support model",
+      "notes": "SQL Always On style workload with HA nodes and quorum witness."
+    },
+    {
+      "application_name": "ehr-core",
+      "business_owner": "Clinical Platform",
+      "technical_owner": "Clinical Platform Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Rehost first with staged application and database modernization",
+      "notes": "Synthetic enterprise application 7 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "claims-core",
+      "business_owner": "Claims It",
+      "technical_owner": "Claims It Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "PII",
+      "target_pattern": "Azure VM and managed database mix",
+      "notes": "Synthetic enterprise application 8 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "provider-portal",
+      "business_owner": "Provider Digital",
+      "technical_owner": "Provider Digital Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "PII",
+      "target_pattern": "Three-tier .NET portal estate with future App Service option",
+      "notes": "Synthetic enterprise application 9 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "integration-bus",
+      "business_owner": "Integration Platform",
+      "technical_owner": "Integration Platform Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "internal",
+      "target_pattern": "Azure VM then container review",
+      "notes": "Synthetic enterprise application 10 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "identity-services",
+      "business_owner": "Security Engineering",
+      "technical_owner": "Security Engineering Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "internal",
+      "target_pattern": "Conservative AVS-first identity estate",
+      "notes": "Synthetic enterprise application 11 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "data-warehouse",
+      "business_owner": "Data Platform",
+      "technical_owner": "Data Platform Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "internal",
+      "target_pattern": "Azure VM then analytics modernization",
+      "notes": "Synthetic enterprise application 12 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "pacs-imaging",
+      "business_owner": "Imaging Services",
+      "technical_owner": "Imaging Services Team",
+      "environment": "prod",
+      "criticality": "tier-1",
+      "sla": "99.95%",
+      "compliance": "HIPAA",
+      "target_pattern": "Conservative migration due to imaging latency and archive dependencies",
+      "notes": "Synthetic enterprise application 13 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "lab-systems",
+      "business_owner": "Lab It",
+      "technical_owner": "Lab It Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "HIPAA",
+      "target_pattern": "AVS or Azure VM depending analyzer connectivity",
+      "notes": "Synthetic enterprise application 14 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "pharmacy",
+      "business_owner": "Pharmacy It",
+      "technical_owner": "Pharmacy It Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "HIPAA",
+      "target_pattern": "Rehost with later modernization assessment",
+      "notes": "Synthetic enterprise application 15 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "call-center",
+      "business_owner": "Customer Ops",
+      "technical_owner": "Customer Ops Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "PII",
+      "target_pattern": "Azure VM and App Service hybrid path",
+      "notes": "Synthetic enterprise application 16 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "research-genomics",
+      "business_owner": "Research Platform",
+      "technical_owner": "Research Platform Team",
+      "environment": "prod",
+      "criticality": "tier-2",
+      "sla": "99.9%",
+      "compliance": "research-data",
+      "target_pattern": "Azure VM compute burst with later HPC and data-lake review",
+      "notes": "Synthetic enterprise application 17 for VMware to Azure migration testing."
+    },
+    {
+      "application_name": "devops-shared",
+      "business_owner": "Platform Engineering",
+      "technical_owner": "Platform Engineering Team",
+      "environment": "dev",
+      "criticality": "tier-3",
+      "sla": "best effort",
+      "compliance": "internal",
+      "target_pattern": "Azure VMs or PaaS replacement",
+      "notes": "Synthetic enterprise application 18 for VMware to Azure migration testing."
+    }
+  ],
+  "vm_count": 200
+}

@@ -1,0 +1,122 @@
+vm,application_name,tier,criticality,owner,technologies,suggested_target,migration_wave
+vm-prod-epic-ehr-core-presen-01,epic-ehr-core,presentation,tier-1,clinical-informatics,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-presen-02,epic-ehr-core,presentation,tier-1,clinical-informatics,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-presen-03,epic-ehr-core,presentation,tier-1,clinical-informatics,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-presen-04,epic-ehr-core,presentation,tier-1,clinical-informatics,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-app-01,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-02,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-03,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-04,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-05,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-06,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-07,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-app-08,epic-ehr-core,app,tier-1,clinical-informatics,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-epic-ehr-core-db-01,epic-ehr-core,db,tier-1,clinical-informatics,SQL Server 2022 Enterprise; Always On Availability Groups; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-db-02,epic-ehr-core,db,tier-1,clinical-informatics,SQL Server 2022 Enterprise; Always On Availability Groups; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-db-03,epic-ehr-core,db,tier-1,clinical-informatics,SQL Server 2022 Enterprise; Always On Availability Groups; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-epic-ehr-core-db-04,epic-ehr-core,db,tier-1,clinical-informatics,SQL Server 2022 Enterprise; Always On Availability Groups; Microsoft Windows Server 2022,Azure VMware Solution,wave-3
+vm-prod-patient-portal-dot-web-01,patient-portal-dotnet,web,tier-1,digital-patient-experience,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-patient-portal-dot-web-02,patient-portal-dotnet,web,tier-1,digital-patient-experience,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-patient-portal-dot-web-03,patient-portal-dotnet,web,tier-1,digital-patient-experience,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-patient-portal-dot-web-04,patient-portal-dotnet,web,tier-1,digital-patient-experience,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-patient-portal-dot-app-01,patient-portal-dotnet,app,tier-1,digital-patient-experience,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-patient-portal-dot-app-02,patient-portal-dotnet,app,tier-1,digital-patient-experience,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-patient-portal-dot-app-03,patient-portal-dotnet,app,tier-1,digital-patient-experience,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-patient-portal-dot-app-04,patient-portal-dotnet,app,tier-1,digital-patient-experience,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-patient-portal-dot-db-01,patient-portal-dotnet,db,tier-1,digital-patient-experience,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-patient-portal-dot-db-02,patient-portal-dotnet,db,tier-1,digital-patient-experience,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-revenue-cycle-sap-sapweb-01,revenue-cycle-sap,sapweb,tier-1,finance-and-revenue-cycle,SAP Web Dispatcher; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-sapweb-02,revenue-cycle-sap,sapweb,tier-1,finance-and-revenue-cycle,SAP Web Dispatcher; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-sapapp-01,revenue-cycle-sap,sapapp,tier-1,finance-and-revenue-cycle,SAP NetWeaver; SAP Application Server; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-sapapp-02,revenue-cycle-sap,sapapp,tier-1,finance-and-revenue-cycle,SAP NetWeaver; SAP Application Server; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-sapapp-03,revenue-cycle-sap,sapapp,tier-1,finance-and-revenue-cycle,SAP NetWeaver; SAP Application Server; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-sapapp-04,revenue-cycle-sap,sapapp,tier-1,finance-and-revenue-cycle,SAP NetWeaver; SAP Application Server; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-batch-01,revenue-cycle-sap,batch,tier-1,finance-and-revenue-cycle,SAP Batch Scheduler; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-batch-02,revenue-cycle-sap,batch,tier-1,finance-and-revenue-cycle,SAP Batch Scheduler; Red Hat Enterprise Linux 8,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-db-01,revenue-cycle-sap,db,tier-1,finance-and-revenue-cycle,SAP HANA 2.0; SUSE Linux Enterprise Server 15,Azure VMware Solution,wave-3
+vm-prod-revenue-cycle-sap-db-02,revenue-cycle-sap,db,tier-1,finance-and-revenue-cycle,SAP HANA 2.0; SUSE Linux Enterprise Server 15,Azure VMware Solution,wave-3
+vm-prod-claims-adjudicatio-web-01,claims-adjudication,web,tier-2,payer-operations,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-claims-adjudicatio-web-02,claims-adjudication,web,tier-2,payer-operations,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-claims-adjudicatio-web-03,claims-adjudication,web,tier-2,payer-operations,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-claims-adjudicatio-web-04,claims-adjudication,web,tier-2,payer-operations,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-claims-adjudicatio-api-01,claims-adjudication,api,tier-2,payer-operations,Nginx; Node.js 18; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-2
+vm-prod-claims-adjudicatio-api-02,claims-adjudication,api,tier-2,payer-operations,Nginx; Node.js 18; Ubuntu Linux,Azure Virtual Machines,wave-2
+vm-prod-claims-adjudicatio-api-03,claims-adjudication,api,tier-2,payer-operations,Nginx; Node.js 18; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-2
+vm-prod-claims-adjudicatio-api-04,claims-adjudication,api,tier-2,payer-operations,Nginx; Node.js 18; Ubuntu Linux,Azure Virtual Machines,wave-2
+vm-prod-claims-adjudicatio-db-01,claims-adjudication,db,tier-2,payer-operations,PostgreSQL 14; Patroni; Ubuntu Linux,Azure Database for PostgreSQL candidate,wave-3
+vm-prod-claims-adjudicatio-db-02,claims-adjudication,db,tier-2,payer-operations,PostgreSQL 14; Patroni; Ubuntu Linux,Azure Database for PostgreSQL candidate,wave-3
+vm-prod-citrix-clinical-de-contro-01,citrix-clinical-desktops,controller,tier-1,clinical-end-user-compute,Citrix Delivery Controller; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-citrix-clinical-de-contro-02,citrix-clinical-desktops,controller,tier-1,clinical-end-user-compute,Citrix Delivery Controller; Microsoft Windows Server 2019,Azure VMware Solution,wave-3
+vm-prod-citrix-clinical-de-storef-01,citrix-clinical-desktops,storefront,tier-1,clinical-end-user-compute,Citrix StoreFront; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-storef-02,citrix-clinical-desktops,storefront,tier-1,clinical-end-user-compute,Citrix StoreFront; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-01,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-02,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-03,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-04,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-05,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-06,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-07,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-08,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-09,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-10,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-11,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-12,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-13,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-14,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-15,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-worker-16,citrix-clinical-desktops,worker,tier-1,clinical-end-user-compute,Citrix Virtual Delivery Agent; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-citrix-clinical-de-db-01,citrix-clinical-desktops,db,tier-1,clinical-end-user-compute,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-citrix-clinical-de-db-02,citrix-clinical-desktops,db,tier-1,clinical-end-user-compute,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-research-genomics--etl-01,research-genomics-pipeline,etl,tier-2,translational-research,Apache Airflow; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--etl-02,research-genomics-pipeline,etl,tier-2,translational-research,Apache Airflow; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--etl-03,research-genomics-pipeline,etl,tier-2,translational-research,Apache Airflow; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--etl-04,research-genomics-pipeline,etl,tier-2,translational-research,Apache Airflow; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-01,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-02,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-03,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-04,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-05,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-06,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-07,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--comput-08,research-genomics-pipeline,compute,tier-2,translational-research,Nextflow; Docker; Python 3.11; Rocky Linux 9,Azure Virtual Machines,wave-3
+vm-prod-research-genomics--db-01,research-genomics-pipeline,db,tier-2,translational-research,PostgreSQL 14; Patroni; Ubuntu Linux,Azure Database for PostgreSQL candidate,wave-3
+vm-prod-research-genomics--db-02,research-genomics-pipeline,db,tier-2,translational-research,PostgreSQL 14; Patroni; Ubuntu Linux,Azure Database for PostgreSQL candidate,wave-3
+vm-prod-pacs-imaging-web-01,pacs-imaging,web,tier-1,radiology-platform,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-pacs-imaging-web-02,pacs-imaging,web,tier-1,radiology-platform,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-pacs-imaging-app-01,pacs-imaging,app,tier-1,radiology-platform,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-pacs-imaging-app-02,pacs-imaging,app,tier-1,radiology-platform,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-pacs-imaging-app-03,pacs-imaging,app,tier-1,radiology-platform,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-pacs-imaging-app-04,pacs-imaging,app,tier-1,radiology-platform,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-pacs-imaging-db-01,pacs-imaging,db,tier-1,radiology-platform,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-pacs-imaging-db-02,pacs-imaging,db,tier-1,radiology-platform,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-lab-information-sy-app-01,lab-information-system,app,tier-1,laboratory-services,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-lab-information-sy-app-02,lab-information-system,app,tier-1,laboratory-services,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-lab-information-sy-app-03,lab-information-system,app,tier-1,laboratory-services,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-lab-information-sy-app-04,lab-information-system,app,tier-1,laboratory-services,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-lab-information-sy-db-01,lab-information-system,db,tier-1,laboratory-services,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-lab-information-sy-db-02,lab-information-system,db,tier-1,laboratory-services,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-pharmacy-managemen-app-01,pharmacy-management,app,tier-1,pharmacy-operations,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-pharmacy-managemen-app-02,pharmacy-management,app,tier-1,pharmacy-operations,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-pharmacy-managemen-app-03,pharmacy-management,app,tier-1,pharmacy-operations,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-pharmacy-managemen-app-04,pharmacy-management,app,tier-1,pharmacy-operations,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-pharmacy-managemen-db-01,pharmacy-management,db,tier-1,pharmacy-operations,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-pharmacy-managemen-db-02,pharmacy-management,db,tier-1,pharmacy-operations,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-provider-directory-web-01,provider-directory,web,tier-2,network-management,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2022,Azure VMware Solution,wave-2
+vm-prod-provider-directory-web-02,provider-directory,web,tier-2,network-management,IIS 10; .NET Framework 4.8; Microsoft Windows Server 2019,Azure VMware Solution,wave-2
+vm-prod-provider-directory-app-01,provider-directory,app,tier-2,network-management,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-provider-directory-app-02,provider-directory,app,tier-2,network-management,IIS 10; .NET 8; Microsoft Windows Server 2022,Azure App Service candidate,wave-3
+vm-prod-provider-directory-db-01,provider-directory,db,tier-2,network-management,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-integration-engine-broker-01,integration-engine,broker,tier-1,interop-platform,Mirth Connect; Python 3.11; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-3
+vm-prod-integration-engine-broker-02,integration-engine,broker,tier-1,interop-platform,Mirth Connect; Python 3.11; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-3
+vm-prod-integration-engine-broker-03,integration-engine,broker,tier-1,interop-platform,Mirth Connect; Python 3.11; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-3
+vm-prod-integration-engine-broker-04,integration-engine,broker,tier-1,interop-platform,Mirth Connect; Python 3.11; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-3
+vm-prod-integration-engine-api-01,integration-engine,api,tier-1,interop-platform,Nginx; Node.js 18; Ubuntu Linux,Azure Virtual Machines,wave-2
+vm-prod-integration-engine-api-02,integration-engine,api,tier-1,interop-platform,Nginx; Node.js 18; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-2
+vm-prod-integration-engine-api-03,integration-engine,api,tier-1,interop-platform,Nginx; Node.js 18; Ubuntu Linux,Azure Virtual Machines,wave-2
+vm-prod-integration-engine-api-04,integration-engine,api,tier-1,interop-platform,Nginx; Node.js 18; Red Hat Enterprise Linux 8,Azure Virtual Machines,wave-2
+vm-prod-identity-and-acces-idm-01,identity-and-access,idm,tier-1,cybersecurity,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-identity-and-acces-idm-02,identity-and-access,idm,tier-1,cybersecurity,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-identity-and-acces-idm-03,identity-and-access,idm,tier-1,cybersecurity,Windows Service; .NET 6; Microsoft Windows Server 2022,Azure Virtual Machines,wave-3
+vm-prod-identity-and-acces-idm-04,identity-and-access,idm,tier-1,cybersecurity,Windows Service; .NET 6; Microsoft Windows Server 2019,Azure Virtual Machines,wave-3
+vm-prod-identity-and-acces-db-01,identity-and-access,db,tier-1,cybersecurity,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3
+vm-prod-identity-and-acces-db-02,identity-and-access,db,tier-1,cybersecurity,SQL Server 2022; SSRS; Microsoft Windows Server 2022,Azure SQL Managed Instance candidate,wave-3

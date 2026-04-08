@@ -1,0 +1,6 @@
+source,target,protocol,port,interaction_type,criticality
+contoso-commerce:web,contoso-commerce:app,HTTPS,443,synchronous,high
+contoso-commerce:app,contoso-commerce:database,TDS,1433,synchronous,critical
+order-api:api,contoso-commerce:app,HTTPS,8443,synchronous,medium
+finance-reporting:reporting,contoso-commerce:database,TDS,1433,scheduled,medium
+devops-shared:ci-cd,order-api:api,HTTPS,443,scheduled,low

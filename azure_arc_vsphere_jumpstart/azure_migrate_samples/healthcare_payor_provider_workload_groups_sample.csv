@@ -1,0 +1,13 @@
+application_name,environment,criticality,owner,vm_count,target_pattern
+epic-ehr-core,prod,tier-1,clinical-informatics,16,Conservative clinical rehost with staged Azure modernization
+patient-portal-dotnet,prod,tier-1,digital-patient-experience,10,Three-tier .NET estate with rehost first and App Service later
+revenue-cycle-sap,prod,tier-1,finance-and-revenue-cycle,10,SAP-led rehost for finance and supply workflows
+claims-adjudication,prod,tier-2,payer-operations,10,Azure VM and managed database mix for payer workloads
+citrix-clinical-desktops,prod,tier-1,clinical-end-user-compute,22,Short-term Citrix retention while Azure Virtual Desktop strategy is validated
+research-genomics-pipeline,prod,tier-2,translational-research,14,Research compute rehost with future HPC and data platform modernization
+pacs-imaging,prod,tier-1,radiology-platform,8,Low-disruption imaging migration with network and archive dependency review
+lab-information-system,prod,tier-1,laboratory-services,6,Rehost first due to analyzer and interface dependencies
+pharmacy-management,prod,tier-1,pharmacy-operations,6,Clinical support system with conservative initial placement
+provider-directory,prod,tier-2,network-management,5,Three-tier .NET provider portal
+integration-engine,prod,tier-1,interop-platform,8,Interface engine estate with later container review
+identity-and-access,prod,tier-1,cybersecurity,6,Conservative AVS-first identity estate

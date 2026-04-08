@@ -1,0 +1,10 @@
+{
+  "decision_factors": [
+    "operational symmetry required",
+    "business downtime tolerance",
+    "database modernization potential",
+    "supportability and licensing",
+    "cloud-native refactor readiness"
+  ],
+  "interpretation": "This planning sample is not an Azure Migrate import schema. It complements RVTools-style import data for portfolio decisions."
+}

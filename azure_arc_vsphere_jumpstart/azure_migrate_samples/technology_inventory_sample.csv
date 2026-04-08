@@ -1,0 +1,9 @@
+vm,application_name,tier,business_criticality,owner,technologies,suggested_target,migration_wave
+vm-prd-web-01,contoso-commerce,web,high,digital-commerce,IIS 10; .NET Framework 4.8; Windows Server 2019,Azure VMware Solution,wave-1
+vm-prd-web-02,contoso-commerce,web,high,digital-commerce,IIS 10; .NET Framework 4.8; Windows Server 2019,Azure VMware Solution,wave-1
+vm-prd-app-01,contoso-commerce,app,high,digital-commerce,Tomcat 9; Java 11; Windows Server 2019,Azure VMware Solution,wave-1
+vm-prd-db-01,contoso-commerce,database,high,data-platform,SQL Server 2019; SSIS; Windows Server 2019,Azure SQL Managed Instance candidate,wave-2
+vm-prd-api-01,order-api,api,medium,integration-platform,Nginx; Node.js 18; Ubuntu 22.04,Azure VMs,wave-2
+vm-prd-rpt-01,finance-reporting,reporting,medium,finance-it,SSRS; SQL Server 2016; Windows Server 2016,Azure VMware Solution,wave-3
+vm-dev-jenkins-01,devops-shared,ci-cd,low,platform-engineering,Jenkins; Docker; CentOS 7,Azure VMs,wave-1
+vm-prd-bastion-01,shared-platform,management,medium,platform-engineering,Remote Desktop Services; Windows Server 2022,Azure Virtual Machine,wave-0

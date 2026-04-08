@@ -1,0 +1,6 @@
+application_name,business_criticality,recommended_initial_target,rationale,modernization_follow_on,suggested_wave
+contoso-commerce,tier-1,AVS,Uses Windows + Tomcat app tiers and low-change requirement; fastest datacenter exit path.,Database later candidate for Azure SQL Managed Instance,wave-1
+order-api,tier-2,Azure VMs,Linux API workload with moderate change tolerance and straightforward rehost.,Evaluate App Service or AKS after stabilization,wave-2
+finance-reporting,tier-2,AVS or Azure VMs,Reporting stack may stay close to current topology initially due to SQL/SSRS coupling.,Assess SQL modernization after dependency validation,wave-3
+devops-shared,tier-3,Azure VMs or PaaS replacement,Good pilot candidate with lower business risk.,Potential Jenkins replacement / PaaS refactor,wave-1
+shared-platform,tier-2,Azure Virtual Machines,Management server fits native IaaS more naturally than AVS.,No immediate modernization dependency,wave-0
