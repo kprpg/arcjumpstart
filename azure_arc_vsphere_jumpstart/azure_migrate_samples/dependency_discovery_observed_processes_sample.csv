@@ -1,0 +1,21 @@
+scenario,application_name,vm_name,tier,process_name,display_name,listen_ports,run_as,process_category,startup_type,observed_state,notes
+enterprise,commerce-java,vm-prod-commerce-java-web-01,web,nginx,Nginx,443,svc_web,web,automatic,running,Steady ingress listener for member and public traffic.
+enterprise,commerce-java,vm-prod-commerce-java-app-01,app,java,Tomcat,8443,svc_java,application,automatic,running,Middle tier handles checkout and catalog APIs.
+enterprise,commerce-java,vm-prod-commerce-java-db-01,db,sqlservr.exe,SQL Server,1433,svc_sql,database,automatic,running,Primary commerce data store.
+enterprise,payments-sqlao,vm-prod-payments-sqlao-api-01,api,dotnet.exe,Payments API,443,svc_pay_api,application,automatic,running,North-south API endpoint for payment initiation.
+enterprise,payments-sqlao,vm-prod-payments-sqlao-dbprima-01,dbprimary,sqlservr.exe,SQL Server Primary,1433;5022,svc_sql,database,automatic,running,Primary SQL Always On replica.
+enterprise,payments-sqlao,vm-prod-payments-sqlao-dbseco-01,dbsecondary,sqlservr.exe,SQL Server Secondary,1433;5022,svc_sql,database,automatic,running,Secondary replica observed receiving HADR traffic.
+enterprise,sap-s4hana,vm-prod-sap-s4hana-sapweb-01,sapweb,sapwebdisp,SAP Web Dispatcher,443,<sid>adm,web,automatic,running,Ingress and routing for SAP web traffic.
+enterprise,sap-s4hana,vm-prod-sap-s4hana-sapapp-01,sapapp,disp+work,SAP App Server,3200;3300,<sid>adm,application,automatic,running,Dialog and RFC processing.
+enterprise,sap-s4hana,vm-prod-sap-s4hana-db-01,db,hdbindexserver,SAP HANA,30015,<sid>adm,database,automatic,running,HANA index server for ERP core.
+enterprise,citrix-vdi,vm-prod-citrix-vdi-contro-01,controller,BrokerService.exe,Citrix Broker Service,80;443,network service,broker,automatic,running,Session brokering and registration.
+enterprise,citrix-vdi,vm-prod-citrix-vdi-storef-01,storefront,Citrix.DeliveryServices,443,network service,web,automatic,running,User storefront and ICA launch.
+enterprise,citrix-vdi,vm-prod-citrix-vdi-worker-01,worker,wfshell.exe,Citrix Session Host,1494;2598,system,session-host,automatic,running,Interactive user-session endpoint with bursty traffic.
+healthcare,ehr-core,vm-prod-ehr-core-web-01,web,IISExpressWorker.exe,EHR Web,443,svc_ehr_web,web,automatic,running,Clinical front end with sustained day-shift usage.
+healthcare,ehr-core,vm-prod-ehr-core-app-01,app,EpicServiceHost.exe,EHR App Tier,8443,svc_ehr_app,application,automatic,running,Application tier with HL7 and API processing.
+healthcare,ehr-core,vm-prod-ehr-core-db-01,db,sqlservr.exe,EHR SQL,1433,svc_sql,database,automatic,running,Transactional clinical data store.
+healthcare,pacs-imaging,vm-prod-pacs-imaging-app-01,app,dicomsvc.exe,PACS DICOM Service,104,svc_pacs,application,automatic,running,DICOM listener with archive fan-out.
+healthcare,pacs-imaging,vm-prod-pacs-imaging-db-01,db,sqlservr.exe,PACS Metadata SQL,1433,svc_sql,database,automatic,running,Imaging metadata repository.
+healthcare,research-genomics,vm-prod-research-genomics-etl-01,etl,python.exe,Genomics ETL,443;22,svc_genomics,data,automatic,running,Scheduled pipeline for ingest and curation.
+healthcare,research-genomics,vm-prod-research-genomics-comput-01,compute,nextflow,Genomics Compute,443;2049,svc_genomics,compute,automatic,running,Bursty compute with batch-heavy observations.
+healthcare,research-genomics,vm-prod-research-genomics-db-01,db,postgres,Research Metadata,5432,svc_pg,database,automatic,running,Metadata and run-state database.

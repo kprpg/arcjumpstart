@@ -1,0 +1,16 @@
+{
+  "description": "Synthetic Azure Migrate dependency-discovery style sample with multiple workload patterns.",
+  "variation_types": [
+    "steady-state tier flows",
+    "batch-window jobs",
+    "burst session traffic",
+    "SQL Always On heartbeat and replication",
+    "external service edges",
+    "healthcare imaging and genomics traffic"
+  ],
+  "how_to_use": [
+    "Use ObservedConnections to discuss what Azure Migrate dependency analysis surfaces at connection level.",
+    "Use ObservedProcesses to explain server-side process visibility and listening ports.",
+    "Use DiscoverySummary to compare applications by criticality, internal coupling, and external edges."
+  ]
+}
